@@ -9,3 +9,4 @@ generate:
 hooks:
   post-deploy:
     - npx nexus-prisma-generate --output ./src/generated/nexus-prisma
+plugins: [ nexusPrisma({ experimentalCRUD: true, outputs: { typegen: join( __dirname, 'generated/', 'typegen-nexus-plugin-prisma.d.ts' ), }, }), ]
