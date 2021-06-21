@@ -1,0 +1,155 @@
+
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.texto
+{
+    padding-top: 25px;
+    line-height: 1.5;
+}
+
+.titulo{
+    font-size: var(--font-size-big);
+    line-height: 1;
+    font-weight: 900;
+    margin: 0 var(--spacing-medium) 0 0;
+}
+
+/*.fundoSetas{
+    height: 40px;
+    width: 75px;
+    border-radius: 0.5rem;
+    background-color: var(--color-white);
+    box-shadow: 0 3px 10px 0 var(--color-black-30);
+    transition: box-shadow 300ms;
+    margin-left: 85.2%;
+    transform: translateY(20%);
+   
+}
+.fundoSetas:hover,:focus
+{
+    box-shadow: 0 0.5rem 1.25rem 0 var(--color-black-30);
+}*/
+
+
+
+.coluna
+{   
+    
+    background-color: var(--color-grey);
+    padding-left: 50px;
+    margin-left: -40px;
+    max-width: 358px;
+}
+
+.icone
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: 0 3px 10px 0 var(--color-black-30);
+    transition: box-shadow 300ms;
+    display:flex;
+    position: absolute;
+    left:96%;
+    top:-2%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.icone:hover,:focus
+{
+    box-shadow: 0 0.5rem 1.25rem 0 var(--color-black-30);
+}
+
+ iframe{
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: 0 3px 10px 0 var(--color-black-30);
+    transition: box-shadow 300ms;
+    display:block;
+    height:400px;
+    width:900px; 
+} 
+
+.programas{
+    display: flex;
+    width: 800px;  
+    
+}
+
+
+
+li {
+    list-style-type: none;
+}
+.azul{
+    background-color: blue;
+    width: 20px;
+}
+.azul{
+   
+    width: 20px;
+
+}
+.player{
+    position: fixed;
+    left:17%;
+    top:10%;
+    
+}
+.modal{
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+@media (max-width: 700px) {
+    iframe{
+    height:370px;
+    width:330px; 
+    }
+
+    .player{
+    position: absolute;
+    left:5%;
+    top:18%;
+   
+    }
+
+    .icone{
+    position: absolute;
+    left:90%;
+    top:-2%;
+    }
+ }
+
+ /*@media (min-width: 1400px) {
+    iframe{
+
+    width:700px; 
+    }
+ }
+@media (min-width: 700px) {
+    iframe{
+
+    width:600px; 
+    }
+
+    .player{
+        
+        left:12%;
+    }
+ }*/
