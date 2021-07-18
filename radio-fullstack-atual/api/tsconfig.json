@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES2019",
+    "module": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "declaration": true,
+    "outDir": "./lib",
+    "rootDir": "./",
+    "composite": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "types": [
+      "node"
+    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "lib"
+  ],
+  "include": [
+    "src"
+  ]
+}

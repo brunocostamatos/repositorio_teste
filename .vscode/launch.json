@@ -1,0 +1,112 @@
+Console.WriteLine("Escolha uma opção: Quadrado (1), Circulo(2), Retângulo(3),  Finalizar(4) ");
+            int escolha = Convert.ToInt16(Console.ReadLine());
+
+            switch (escolha)
+            {
+                case 1: CreateQuad() ; break;
+                case 2: CreateCirc() ; break;
+                case 3: CreateReta() ; break;
+                case 4: CreateFinal(); break; 
+            }   
+            
+            void CreateQuad()
+            {
+                Quadrado obj1 = new Quadrado();
+            }
+
+            void CreateCirc()
+            {
+                Circulo obj2 = new Circulo();
+            }
+            
+            void CreateReta()
+            {
+                Retangulo obj3 = new Retangulo();
+            }
+
+            void CreateFinal()
+            {
+                Finalizar obj4 = new Finalizar();
+            }
+        }
+
+    }
+
+    abstract class FiguraGeometrica
+    {
+        protected abstract double Area();
+        protected abstract double Perimetro();
+    }
+
+    class Quadrado : FiguraGeometrica
+    {
+        double lado {get; set;}
+
+        public Quadrado()
+        {
+            Console.Write("Digite o Lado: ");
+            lado = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Area:" + Area());
+            Console.WriteLine("Perimetro: " + Perimetro());
+        }
+        
+        protected override double Area()
+        {
+            return (lado * lado);
+        }
+
+        protected override double Perimetro()
+        {
+            return (lado + lado + lado + lado);
+        }
+    }
+
+    class Retangulo : FiguraGeometrica
+    {
+        double lado1 {get; set;} double lado2 {get; set;}
+
+        public Retangulo()
+        {
+            Console.WriteLine("Digite a base e a altura:");
+            lado1 = Convert.ToDouble(Console.ReadLine());
+            lado2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Area: " + Area());
+            Console.WriteLine("Perimetro: " + Perimetro());
+        }
+
+        protected override double Area() 
+        {
+            return (lado1 * lado2);
+        }
+
+        protected override double Perimetro() 
+        {
+            return ((2 * lado1) + (2 * lado2)); 
+        }
+    }
+
+    class Circulo : FiguraGeometrica
+    {
+        double raio {get; set;}
+
+        public Circulo()
+        {
+            Console.WriteLine("Digite o Raio:");
+            raio = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Area: " + Area());
+            Console.WriteLine("Perimetro: " + Perimetro());
+        }
+
+        protected override double Area()
+        {
+            return ( Math.PI * Math.Pow(raio, 2) );
+        }
+
+        protected override double Perimetro()
+        {
+            return ( (Math.PI * 2) * raio );
+        }
+    }

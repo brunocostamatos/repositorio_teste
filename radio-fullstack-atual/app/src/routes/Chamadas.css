@@ -1,0 +1,8 @@
+.sobre {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2rem 1rem 0;
+    justify-content: center;
+    position: relative;
+ }
