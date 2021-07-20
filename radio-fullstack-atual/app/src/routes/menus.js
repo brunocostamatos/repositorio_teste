@@ -1,5 +1,5 @@
 import { normalizeStr } from '../utils/misc'
-
+import React from 'react'
 import Home from './Home'
 import AoVivo from './AoVivo'
 import Eventos from './Eventos'
@@ -17,7 +17,7 @@ export const Components = {
    Chamadas,
    Grade
 }
-
+const html = <div>Informação {'&'}<br></br>Conhecimento</div>
 const data = [
    {
       icon: 'home',
@@ -43,7 +43,7 @@ const data = [
 
    {
       icon: 'coffee',
-      text: 'Informação & ',
+      text: html,
       subtext:'Conhecimento',
       component: 'Home',
       sub: true,

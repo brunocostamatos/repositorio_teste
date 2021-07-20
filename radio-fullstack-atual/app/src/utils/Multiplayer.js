@@ -84,8 +84,7 @@ const MultiPlayer = ({ urls }) => {
 
 const Player = ({ player, toggle }) => (
   <a href="#btn-toggle-play" >
-    <img onClick={toggle} src={srcBg2}/>  
-    
+    <img className="srcBg2"onClick={toggle} src={srcBg2} style={{"margin-left":-14}}/>  
   </a>
 );
 //<a onClick={toggle}>{player.playing ? "" : ""}</a>

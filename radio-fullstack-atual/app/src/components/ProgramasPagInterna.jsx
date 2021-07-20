@@ -198,6 +198,7 @@ export function ProgramasPagInterna({setEstado, setId, breakPoint}) {
       
     }
     
+  
     
    function Card({programa,size}) {
       const [est, setEst] = useState('none') 
@@ -212,11 +213,11 @@ export function ProgramasPagInterna({setEstado, setId, breakPoint}) {
               descricaoEpisodio.map((conteudo)=>{if(conteudo.show_id == programa.show_id){setDescri(conteudo.descricao.substring(0,90))}});
               setEst('block')
               
-              }} src={programa.image_url}/>
+              }}src={programa.image_url}/>
          </article>
 
          <div className="botao">
-            <span onClick={()=>player(programa.show_id)} className="end">
+            <span style={{"cursor":"pointer"}} onClick={()=>player(programa.show_id)} className="end">
                  <span>Ouvir</span>
             </span>
           
@@ -230,7 +231,7 @@ export function ProgramasPagInterna({setEstado, setId, breakPoint}) {
            >
            <p className="descricao">{descri} 
            <br/>
-           <span onClick={()=>player(programa.show_id)}>
+           <span style={{"cursor":"pointer","font-weight":"bold"}} onClick={()=>window.open('https://www.spreaker.com/show/'+programa.show_id, '_blank')}>
                  <span>[Saiba+]</span>
             </span>
            </p>

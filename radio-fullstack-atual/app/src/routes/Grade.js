@@ -1,7 +1,8 @@
 import React from 'react'
 
 export function Grade() {
-   return <h1>Em construçao...</h1>
+   return <h1 style={{"text-align":"center"}}><br></br>Em breve</h1>
+            
 }
 
 export default Grade

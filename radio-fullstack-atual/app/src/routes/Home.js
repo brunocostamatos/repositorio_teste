@@ -60,6 +60,7 @@ export function Home() {
    {
       setEstado('none')
       prog=undefined;
+      
 
    }
 
@@ -80,13 +81,23 @@ export function Home() {
             <img className={app.logo} src={logoSrc} alt="" />
          </MediaQuery>
          <Row>
+            <div className='coluna'> 
+            <Live/>
+            </div>
+            <MediaQuery minWidth={701}>
+               <WrapperScrollerAside>
+                  <News  setEstado={setEstado} setId={setId} breakPoint={701}/>
+               </WrapperScrollerAside>
+            </MediaQuery>
+         </Row>
+         {/* <Row>
             <Live />
             <MediaQuery minWidth={701}>
                <WrapperScrollerAside>
                   <News setEstado={setEstado} setId={setId} breakPoint={701} />
                </WrapperScrollerAside>
             </MediaQuery>
-         </Row>
+         </Row> */}
          <MediaQuery setEstado={setEstado} setId={setId} maxWidth={700}>
             <Row>
                <News />

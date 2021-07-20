@@ -193,7 +193,7 @@ export function News({setEstado, setId, breakPoint }) {
                <p>{programa.descricao}</p>
             </article>
             <span onClick={()=>player(programa.episodio_id)} className="end">
-               <span>Ouvir</span>
+               <span >Ouvir</span>
             </span>
          </Link>
       </CardNews>
